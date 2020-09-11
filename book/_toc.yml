@@ -2,7 +2,8 @@
 
 - part: Introduction to Python
   chapters:
-  - file: python/py_intro
+  - file: python/00-python_intro
+  - file: python/01-string_formatting
 
 - part: Numpy
   chapters:

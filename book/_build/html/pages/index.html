@@ -25,6 +25,8 @@
     <script src="../_static/copybutton.js"></script>
     <script src="../_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -35,7 +37,7 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction to Python" href="../python/py_intro.html" />
+    <link rel="next" title="Introduction to Python" href="../python/00-python_intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -75,8 +77,13 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../python/py_intro.html">
+  <a class="reference internal" href="../python/00-python_intro.html">
    Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/01-string_formatting.html">
+   String Formatting
   </a>
  </li>
 </ul>
@@ -199,7 +206,16 @@
             <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
-            
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#author">
+   Author
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
         </nav>
     </div>
 </div>
@@ -210,8 +226,11 @@
                 
   <div class="section" id="welcome">
 <h1>Welcome<a class="headerlink" href="#welcome" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to Data Science Notes. This template is created based on <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter Book</a></p>
-<p>The book is available online at https://hossainlab.github.io/dsn-template.</p>
+<p>Welcome to Data Science Notes. This is a short sequence of notes on Python programming for scientific work, specially in the field of data science written by <a class="reference external" href="https://jhossain.me/">Jubayer Hossian</a>.</p>
+<p>This site is available online at <a class="reference external" href="https://hossainlab.github.io/dsnotes/pages/index.html">github</a></p>
+<div class="section" id="author">
+<h2>Author<a class="headerlink" href="#author" title="Permalink to this headline">¶</a></h2>
+<p>Heye there! This is Jubayer Hossain. I am a student of Microbiology at <a class="reference external" href="https://jnu.ac.bd/dept/portal/web/microbiology">Jagannath University</a> and a Health Data Science Enthusiastic. I am also the founder of <a class="reference external" href="https://hdrobd.org/">Health Data Research Organization</a> My research interests are health data science, bioinformatics, microscopic image analysis, and machine learning. Recently, we have formed an organization named Health Data Research Organization for creating research opportunities in health data science and genomic data science in Bangladesh and I am working on it.</p>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
@@ -219,6 +238,7 @@
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 
@@ -250,7 +270,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="../python/py_intro.html" title="next page">Introduction to Python</a>
+    <a class='right-next' id="next-link" href="../python/00-python_intro.html" title="next page">Introduction to Python</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
