@@ -1,0 +1,552 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Introduction to Algorithmic Thinking &#8212; Data Science Notes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Science Notes</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Introduction to Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="00-python_intro.html">
+   Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-string_formatting.html">
+   String Formatting
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numpy
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy/numpy.html">
+   Introduction to Numpy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pandas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pandas/pandas_intro.html">
+   Introduction to Pandas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Matplotlib
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../matplotlib/matplotlib_intro.html">
+   Introduction to Matplotlib
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/python/(E) AlgoThinking.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/hossainlab/dsnotes/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        <a class="edit-button" href="https://github.com/hossainlab/dsnotes/edit/master/book/python/(E) AlgoThinking.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/hossainlab/dsnotes/master?urlpath=tree/book/python/(E) AlgoThinking.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/hossainlab/dsnotes/blob/master/book/python/(E) AlgoThinking.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#previous">
+   Previous
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#today">
+   Today
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-algorithms">
+   What is Algorithms?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#importance-of-algorithms">
+   Importance of algorithms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithmic-thinking-the-ultimate-steps">
+   Algorithmic Thinking: The Ultimate Steps
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#understanding-the-problem">
+     Understanding the Problem
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formulate-the-problem">
+     Formulate the Problem
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#design-an-algorithm">
+     Design an Algorithm
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-flow-chart">
+   What is Flow Chart?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decision-making">
+   Decision Making
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-pseudocode">
+   What is Pseudocode?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pseudocode-example">
+     Pseudocode Example
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resources">
+   Resources
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introduction-to-algorithmic-thinking">
+<h1>Introduction to Algorithmic Thinking<a class="headerlink" href="#introduction-to-algorithmic-thinking" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/datasticslab/ISCB">Datastics Lab</a> | Created by <a class="reference external" href="https://github.com/jubayer-hossain">Jubayer Hossain</a></p>
+<div class="section" id="previous">
+<h2>Previous<a class="headerlink" href="#previous" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>What is Python?</p></li>
+<li><p>Why Python Rocks in Research?</p></li>
+<li><p>Little bit history of Python</p></li>
+<li><p>Variables, Expressions, Comments</p></li>
+<li><p>Data Types</p></li>
+<li><p>Printing Messages</p></li>
+<li><p>Operators in Python</p></li>
+<li><p>Python Data Type Conversion</p></li>
+<li><p>Python User Inputs</p></li>
+</ul>
+</div>
+<div class="section" id="today">
+<h2>Today<a class="headerlink" href="#today" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Algorithms</p></li>
+<li><p>Flowchart</p></li>
+</ul>
+</div>
+<div class="section" id="what-is-algorithms">
+<h2>What is Algorithms?<a class="headerlink" href="#what-is-algorithms" title="Permalink to this headline">¶</a></h2>
+<p>An algorithm is a <strong>sequence</strong> combination of finite steps to solve a particular problem. <br></p>
+<blockquote>
+<div><p>“Algorithmic thinking is likely to cause the most disruptive paradigm shift in the sciences since quantum mechanics.” <br> —Bernard Chazelle</p>
+</div></blockquote>
+<p>For example: Multiple two numbers</p>
+<ul class="simple">
+<li><p><strong>Step-1:</strong> Take two inputs(a,b)</p></li>
+<li><p><strong>Step-2:</strong> Multiply <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code> and store in <code class="docutils literal notranslate"><span class="pre">sum</span></code></p></li>
+<li><p><strong>Step-3:</strong> Print <code class="docutils literal notranslate"><span class="pre">sum</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="importance-of-algorithms">
+<h2>Importance of algorithms<a class="headerlink" href="#importance-of-algorithms" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>To improve the efficiency of a computer program</p></li>
+<li><p>Proper utilization of resources</p></li>
+</ul>
+</div>
+<div class="section" id="algorithmic-thinking-the-ultimate-steps">
+<h2>Algorithmic Thinking: The Ultimate Steps<a class="headerlink" href="#algorithmic-thinking-the-ultimate-steps" title="Permalink to this headline">¶</a></h2>
+<p><img alt="Images" src="python/../img/algo.png" /></p>
+<ul class="simple">
+<li><p><strong>Step-1:</strong> Understabd the problem</p></li>
+<li><p><strong>Step-2:</strong> Formulate it</p></li>
+<li><p><strong>Step-3:</strong> Design an algorithm</p></li>
+<li><p><strong>Step-4:</strong> Implement it</p></li>
+<li><p><strong>Step-5:</strong> Run the code and solve the original problem</p></li>
+</ul>
+<div class="section" id="understanding-the-problem">
+<h3>Understanding the Problem<a class="headerlink" href="#understanding-the-problem" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Understabd the description of the problem</p></li>
+<li><p>What are the input/output?</p></li>
+<li><p>Do a few examples by hand</p></li>
+<li><p>Think about special cases</p></li>
+</ul>
+</div>
+<div class="section" id="formulate-the-problem">
+<h3>Formulate the Problem<a class="headerlink" href="#formulate-the-problem" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Think about the data and the best way to represent them(graph, strings, etc)</p></li>
+<li><p>What mathematical criterion corresponds to the desired output?</p></li>
+</ul>
+</div>
+<div class="section" id="design-an-algorithm">
+<h3>Design an Algorithm<a class="headerlink" href="#design-an-algorithm" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Is the formulated problem amenable to certain algorithm design technique (greedy, divide-and-conquer etc.)</p></li>
+<li><p>What data structures match</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>\begin{example}
+Write a Python Program to Add Two Integers
+\end{example}</p>
+<ul class="simple">
+<li><p>Start</p></li>
+<li><p>Inputs A, B(INT)</p></li>
+<li><p>SUM = A + B</p></li>
+<li><p>PRINT SUM</p></li>
+<li><p>End</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span> 
+<span class="n">B</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span> 
+
+<span class="n">SUM</span> <span class="o">=</span> <span class="n">A</span><span class="o">+</span><span class="n">B</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">SUM</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+36
+46
+</pre></div>
+</div>
+</div>
+</div>
+<p>\begin{example}
+Write a Python Program to Compute the Average of Two Integers<br />
+\end{example}</p>
+<ul class="simple">
+<li><p>Start</p></li>
+<li><p>INPUT A, B(INT)</p></li>
+<li><p>AVG = A+B/2</p></li>
+<li><p>PRINT AVG</p></li>
+<li><p>End</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span> 
+<span class="n">Y</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span> 
+<span class="n">AVG</span> <span class="o">=</span> <span class="p">(</span><span class="n">X</span><span class="o">+</span><span class="n">Y</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">AVG</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+36
+23.0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="what-is-flow-chart">
+<h2>What is Flow Chart?<a class="headerlink" href="#what-is-flow-chart" title="Permalink to this headline">¶</a></h2>
+<p>A flowchart is a type of diagram that represents a workflow or process. <strong>A flowchart can also be defined as a diagrammatic representation of an algorithm, a step-by-step approach to solving a task.</strong> The flowchart shows the steps as boxes of various kinds, and their order by connecting the boxes with arrows.
+Sources: <a class="reference external" href="https://en.wikipedia.org/wiki/Flowchart">wikipedia</a></p>
+<p><img alt="flow chart" src="python/../img/flow-chart.png" /></p>
+</div>
+<div class="section" id="decision-making">
+<h2>Decision Making<a class="headerlink" href="#decision-making" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Step-1:</strong> Start</p></li>
+<li><p><strong>Step-2:</strong> Input Marks</p></li>
+<li><p><strong>Step-3:</strong> Calculate Grade and Store in a Variable(Grade = M1+M2+M3+M4)</p></li>
+<li><p><strong>Step-4:</strong> Grade &lt; 60?</p>
+<ul>
+<li><p><strong>Step-4.1:</strong> Yes, then print <code class="docutils literal notranslate"><span class="pre">FAIL</span></code></p></li>
+<li><p><strong>Step-4.2:</strong> False, then print <code class="docutils literal notranslate"><span class="pre">PASS</span></code></p></li>
+</ul>
+</li>
+<li><p><strong>Step-5:</strong> End</p></li>
+</ul>
+<p><img alt="" src="../_images/pass-fail.png" /></p>
+</div>
+<div class="section" id="what-is-pseudocode">
+<h2>What is Pseudocode?<a class="headerlink" href="#what-is-pseudocode" title="Permalink to this headline">¶</a></h2>
+<p>Pseudocode is an informal high-level description of the operating principle of a computer program or other algorithm. It uses the structural conventions of a normal programming language, but is intended for human reading rather than machine reading.</p>
+<p>Source: <a class="reference external" href="https://en.wikipedia.org/wiki/Pseudocode">wikipedia</a></p>
+<div class="section" id="pseudocode-example">
+<h3>Pseudocode Example<a class="headerlink" href="#pseudocode-example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span> <span class="n">M1</span>
+<span class="n">Input</span> <span class="n">M2</span> 
+<span class="n">Input</span> <span class="n">M3</span> 
+<span class="n">Input</span> <span class="n">M4</span> 
+<span class="n">Grade</span> <span class="o">=</span> <span class="p">(</span><span class="n">M1</span><span class="o">+</span><span class="n">M2</span><span class="o">+</span><span class="n">M3</span><span class="o">+</span><span class="n">M4</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span> 
+<span class="k">if</span> <span class="n">grade</span> <span class="o">&lt;</span> <span class="mi">60</span>
+    <span class="n">Print</span> <span class="n">FAIL</span>
+<span class="k">else</span> 
+    <span class="n">Print</span> <span class="n">Pass</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>https://www.python.org/doc/essays/blurb/</p></li>
+<li><p>https://dev.to/duomly/10-reasons-why-learning-python-is-still-a-great-idea-5abh</p></li>
+<li><p>https://www.stat.washington.edu/~hoytak/blog/whypython.html</p></li>
+<li><p>https://www.programiz.com/python-programming</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Jubayer Hossain<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
