@@ -1,0 +1,17 @@
+- file: pages/index
+
+- part: Introduction to Python
+  chapters:
+  - file: python/py_intro
+
+- part: Numpy
+  chapters:
+  - file: numpy/numpy
+
+- part: Pandas
+  chapters:
+  - file: pandas/pandas_intro
+
+- part: Matplotlib
+  chapters:
+  - file: matplotlib/matplotlib_intro
