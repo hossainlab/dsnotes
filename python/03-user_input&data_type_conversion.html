@@ -37,6 +37,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Introduction to Algorithmic Thinking" href="04-algo_thinking.html" />
+    <link rel="prev" title="Operators in Python" href="02-operators_in_python.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -74,7 +76,7 @@
   Introduction to Python
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="00-python_intro.html">
    Introduction to Python
@@ -83,6 +85,26 @@
  <li class="toctree-l1">
   <a class="reference internal" href="01-string_formatting.html">
    String Formatting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-operators_in_python.html">
+   Operators in Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   User Input in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-algo_thinking.html">
+   Introduction to Algorithmic Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-conditional_logic.html">
+   Conditional Logic
   </a>
  </li>
 </ul>
@@ -163,7 +185,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/python/(D) User Input & Data Type Conversion.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/python/03-user_input&data_type_conversion.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -183,7 +205,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         
-        <a class="edit-button" href="https://github.com/hossainlab/dsnotes/edit/master/book/python/(D) User Input & Data Type Conversion.ipynb"><button
+        <a class="edit-button" href="https://github.com/hossainlab/dsnotes/edit/master/book/python/03-user_input&data_type_conversion.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -202,7 +224,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/hossainlab/dsnotes/master?urlpath=tree/book/python/(D) User Input & Data Type Conversion.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/hossainlab/dsnotes/master?urlpath=tree/book/python/03-user_input&data_type_conversion.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -210,7 +232,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/hossainlab/dsnotes/blob/master/book/python/(D) User Input & Data Type Conversion.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/hossainlab/dsnotes/blob/master/book/python/03-user_input&data_type_conversion.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -228,16 +250,6 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#previous">
-   Previous
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#today">
-   Today
-  </a>
- </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#type-conversion">
    Type Conversion
@@ -294,16 +306,6 @@
    Multiple Inputs
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#problem-solving">
-   Problem Solving
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#resources">
-   Resources
-  </a>
- </li>
 </ul>
 
         </nav>
@@ -316,26 +318,6 @@
                 
   <div class="section" id="user-input-in-python">
 <h1>User Input in Python<a class="headerlink" href="#user-input-in-python" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/datasticslab/ISCB">Datastics Lab</a> | Created by <a class="reference external" href="https://github.com/jubayer-hossain">Jubayer Hossain</a></p>
-<div class="section" id="previous">
-<h2>Previous<a class="headerlink" href="#previous" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>What is Python?</p></li>
-<li><p>Why Python Rocks in Research?</p></li>
-<li><p>Little bit history of Python</p></li>
-<li><p>Variables, Expressions, Comments</p></li>
-<li><p>Data Types</p></li>
-<li><p>Printing Messages</p></li>
-<li><p>Operators in Python</p></li>
-</ul>
-</div>
-<div class="section" id="today">
-<h2>Today<a class="headerlink" href="#today" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Type Conversion</p></li>
-<li><p>User Inputs</p></li>
-</ul>
-</div>
 <div class="section" id="type-conversion">
 <h2>Type Conversion<a class="headerlink" href="#type-conversion" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="float-to-integer">
@@ -665,23 +647,6 @@ Write a Python Program to Multiply Tree Floating Point Numbers
 </div>
 </div>
 </div>
-<div class="section" id="problem-solving">
-<h2>Problem Solving<a class="headerlink" href="#problem-solving" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Variable: https://www.sanfoundry.com/python-questions-answers-variable-names/</p></li>
-<li><p>Operators: https://www.sanfoundry.com/python-mcqs-basic-operators/</p></li>
-<li><p>Numeric Data Types: https://www.sanfoundry.com/python-questions-answers-numeric-types/</p></li>
-</ul>
-</div>
-<div class="section" id="resources">
-<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>https://www.python.org/doc/essays/blurb/</p></li>
-<li><p>https://dev.to/duomly/10-reasons-why-learning-python-is-still-a-great-idea-5abh</p></li>
-<li><p>https://www.stat.washington.edu/~hoytak/blog/whypython.html</p></li>
-<li><p>https://www.programiz.com/python-programming</p></li>
-</ul>
-</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -712,6 +677,8 @@ Write a Python Program to Multiply Tree Floating Point Numbers
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="02-operators_in_python.html" title="previous page">Operators in Python</a>
+    <a class='right-next' id="next-link" href="04-algo_thinking.html" title="next page">Introduction to Algorithmic Thinking</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

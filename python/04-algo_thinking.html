@@ -37,6 +37,8 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Conditional Logic" href="05-conditional_logic.html" />
+    <link rel="prev" title="User Input in Python" href="03-user_input&amp;data_type_conversion.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -74,7 +76,7 @@
   Introduction to Python
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="00-python_intro.html">
    Introduction to Python
@@ -83,6 +85,26 @@
  <li class="toctree-l1">
   <a class="reference internal" href="01-string_formatting.html">
    String Formatting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-operators_in_python.html">
+   Operators in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-user_input&amp;data_type_conversion.html">
+   User Input in Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introduction to Algorithmic Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-conditional_logic.html">
+   Conditional Logic
   </a>
  </li>
 </ul>
@@ -163,7 +185,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/python/(E) AlgoThinking.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/python/04-algo_thinking.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -183,7 +205,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         
-        <a class="edit-button" href="https://github.com/hossainlab/dsnotes/edit/master/book/python/(E) AlgoThinking.ipynb"><button
+        <a class="edit-button" href="https://github.com/hossainlab/dsnotes/edit/master/book/python/04-algo_thinking.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -202,7 +224,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/hossainlab/dsnotes/master?urlpath=tree/book/python/(E) AlgoThinking.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/hossainlab/dsnotes/master?urlpath=tree/book/python/04-algo_thinking.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -210,7 +232,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/hossainlab/dsnotes/blob/master/book/python/(E) AlgoThinking.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/hossainlab/dsnotes/blob/master/book/python/04-algo_thinking.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -228,16 +250,6 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#previous">
-   Previous
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#today">
-   Today
-  </a>
- </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-algorithms">
    What is Algorithms?
@@ -297,11 +309,6 @@
    </li>
   </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#resources">
-   Resources
-  </a>
- </li>
 </ul>
 
         </nav>
@@ -314,28 +321,6 @@
                 
   <div class="section" id="introduction-to-algorithmic-thinking">
 <h1>Introduction to Algorithmic Thinking<a class="headerlink" href="#introduction-to-algorithmic-thinking" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/datasticslab/ISCB">Datastics Lab</a> | Created by <a class="reference external" href="https://github.com/jubayer-hossain">Jubayer Hossain</a></p>
-<div class="section" id="previous">
-<h2>Previous<a class="headerlink" href="#previous" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>What is Python?</p></li>
-<li><p>Why Python Rocks in Research?</p></li>
-<li><p>Little bit history of Python</p></li>
-<li><p>Variables, Expressions, Comments</p></li>
-<li><p>Data Types</p></li>
-<li><p>Printing Messages</p></li>
-<li><p>Operators in Python</p></li>
-<li><p>Python Data Type Conversion</p></li>
-<li><p>Python User Inputs</p></li>
-</ul>
-</div>
-<div class="section" id="today">
-<h2>Today<a class="headerlink" href="#today" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Algorithms</p></li>
-<li><p>Flowchart</p></li>
-</ul>
-</div>
 <div class="section" id="what-is-algorithms">
 <h2>What is Algorithms?<a class="headerlink" href="#what-is-algorithms" title="Permalink to this headline">¶</a></h2>
 <p>An algorithm is a <strong>sequence</strong> combination of finite steps to solve a particular problem. <br></p>
@@ -358,7 +343,7 @@
 </div>
 <div class="section" id="algorithmic-thinking-the-ultimate-steps">
 <h2>Algorithmic Thinking: The Ultimate Steps<a class="headerlink" href="#algorithmic-thinking-the-ultimate-steps" title="Permalink to this headline">¶</a></h2>
-<p><img alt="Images" src="python/../img/algo.png" /></p>
+<p><img alt="Images" src="../_images/algo.png" /></p>
 <ul class="simple">
 <li><p><strong>Step-1:</strong> Understabd the problem</p></li>
 <li><p><strong>Step-2:</strong> Formulate it</p></li>
@@ -452,7 +437,7 @@ Write a Python Program to Compute the Average of Two Integers<br />
 <h2>What is Flow Chart?<a class="headerlink" href="#what-is-flow-chart" title="Permalink to this headline">¶</a></h2>
 <p>A flowchart is a type of diagram that represents a workflow or process. <strong>A flowchart can also be defined as a diagrammatic representation of an algorithm, a step-by-step approach to solving a task.</strong> The flowchart shows the steps as boxes of various kinds, and their order by connecting the boxes with arrows.
 Sources: <a class="reference external" href="https://en.wikipedia.org/wiki/Flowchart">wikipedia</a></p>
-<p><img alt="flow chart" src="python/../img/flow-chart.png" /></p>
+<p><img alt="flow chart" src="../_images/flow-chart.png" /></p>
 </div>
 <div class="section" id="decision-making">
 <h2>Decision Making<a class="headerlink" href="#decision-making" title="Permalink to this headline">¶</a></h2>
@@ -489,15 +474,6 @@ Sources: <a class="reference external" href="https://en.wikipedia.org/wiki/Flowc
 </div>
 </div>
 </div>
-<div class="section" id="resources">
-<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>https://www.python.org/doc/essays/blurb/</p></li>
-<li><p>https://dev.to/duomly/10-reasons-why-learning-python-is-still-a-great-idea-5abh</p></li>
-<li><p>https://www.stat.washington.edu/~hoytak/blog/whypython.html</p></li>
-<li><p>https://www.programiz.com/python-programming</p></li>
-</ul>
-</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -528,6 +504,8 @@ Sources: <a class="reference external" href="https://en.wikipedia.org/wiki/Flowc
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="03-user_input&amp;data_type_conversion.html" title="previous page">User Input in Python</a>
+    <a class='right-next' id="next-link" href="05-conditional_logic.html" title="next page">Conditional Logic</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
