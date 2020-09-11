@@ -1,20 +1,5 @@
 # Introduction to Algorithmic Thinking
-[Datastics Lab](https://github.com/datasticslab/ISCB) | Created by [Jubayer Hossain](https://github.com/jubayer-hossain)
 
-## Previous
-- What is Python? 
-- Why Python Rocks in Research? 
-- Little bit history of Python 
-- Variables, Expressions, Comments 
-- Data Types 
-- Printing Messages 
-- Operators in Python
-- Python Data Type Conversion 
-- Python User Inputs 
-
-## Today 
-- Algorithms 
-- Flowchart 
 
 ## What is Algorithms? 
 An algorithm is a **sequence** combination of finite steps to solve a particular problem. <br>
@@ -30,7 +15,7 @@ For example: Multiple two numbers
 - Proper utilization of resources 
 
 ## Algorithmic Thinking: The Ultimate Steps 
-![Images](../img/algo.png)
+![Images](./img/algo.png)
 - **Step-1:** Understabd the problem 
 - **Step-2:** Formulate it 
 - **Step-3:** Design an algorithm
@@ -89,7 +74,7 @@ print(AVG)
 A flowchart is a type of diagram that represents a workflow or process. **A flowchart can also be defined as a diagrammatic representation of an algorithm, a step-by-step approach to solving a task.** The flowchart shows the steps as boxes of various kinds, and their order by connecting the boxes with arrows. 
 Sources: [wikipedia](https://en.wikipedia.org/wiki/Flowchart)
 
-![flow chart](../img/flow-chart.png)
+![flow chart](./img/flow-chart.png)
 
 ## Decision Making 
 - **Step-1:** Start 
@@ -119,9 +104,3 @@ if grade < 60
 else 
     Print Pass 
 ```
-
-## Resources 
-- https://www.python.org/doc/essays/blurb/
-- https://dev.to/duomly/10-reasons-why-learning-python-is-still-a-great-idea-5abh
-- https://www.stat.washington.edu/~hoytak/blog/whypython.html
-- https://www.programiz.com/python-programming

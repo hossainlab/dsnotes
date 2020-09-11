@@ -1,24 +1,4 @@
-# Loops 
-[Datastics Lab](https://github.com/datasticslab/ISCB) | Created by [Jubayer Hossain](https://github.com/jubayer-hossain)
-
-## Previous
-- What is Python? 
-- Why Python Rocks in Research? 
-- Little bit history of Python 
-- Variables, Expressions, Comments 
-- Data Types 
-- Printing Messages 
-- Operators in Python
-- Python Data Type Conversion 
-- Python User Inputs 
-- Algorithms and Flowcharts 
-- Conditional Execution Patterns 
-
-## Today 
-- Conditional Execution Patterns 
-- `if` statement 
-- `else` statement 
-- `elif` statement
+# Conditional Logic 
 
 ## `if` Statement
 ### Syntax 
@@ -35,7 +15,7 @@ if condition:
 - Starting on the next line, an **indented** block of code(called if clause) 
 
 ### Flowchart 
-![img](../img/Python_if_statement.jpg)
+![img](./img/Python_if_statement.jpg)
 
 # Example-1 
 x = 5 
@@ -66,7 +46,7 @@ else:
 - Starting on the next line, an **indented** block of code(called else clause) 
 
 ### Flowchart 
-![img](../img/Python_if_else_statement.jpg)
+![img](./img/Python_if_else_statement.jpg)
 
 a = -10 
 if a > 0: 
@@ -102,7 +82,7 @@ else:
 - Starting on the next line, an **indented** block of code(called elif clause) 
 
 ### Flowchart 
-![img](../img/Python_if_elif_else_statement.jpg)
+![img](./img/Python_if_elif_else_statement.jpg)
 
 bmi = 20
 if bmi <= 18.5: 
@@ -127,9 +107,3 @@ else:
 11 % 2 
 
 25 % 2 
-
-## Resources 
-- https://www.python.org/doc/essays/blurb/
-- https://dev.to/duomly/10-reasons-why-learning-python-is-still-a-great-idea-5abh
-- https://www.stat.washington.edu/~hoytak/blog/whypython.html
-- https://www.programiz.com/python-programming

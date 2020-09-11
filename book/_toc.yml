@@ -4,6 +4,12 @@
   chapters:
   - file: python/00-python_intro
   - file: python/01-string_formatting
+  - file: python/02-operators_in_python
+  - file: python/03-user_input&data_type_conversion
+  - file: python/04-algo_thinking
+  - file: python/05-conditional_logic
+
+
 
 - part: Numpy
   chapters:

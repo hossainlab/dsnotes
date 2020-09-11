@@ -1,18 +1,4 @@
 # User Input in Python
-[Datastics Lab](https://github.com/datasticslab/ISCB) | Created by [Jubayer Hossain](https://github.com/jubayer-hossain)
-
-## Previous
-- What is Python? 
-- Why Python Rocks in Research? 
-- Little bit history of Python 
-- Variables, Expressions, Comments 
-- Data Types 
-- Printing Messages 
-- Operators in Python
-
-## Today 
-- Type Conversion
-- User Inputs 
 
 ## Type Conversion
 
@@ -154,14 +140,3 @@ Write a Python Program to Multiply Tree Floating Point Numbers
 
 
 # Write your solution
-
-## Problem Solving 
-- Variable: https://www.sanfoundry.com/python-questions-answers-variable-names/
-- Operators: https://www.sanfoundry.com/python-mcqs-basic-operators/
-- Numeric Data Types: https://www.sanfoundry.com/python-questions-answers-numeric-types/
-
-## Resources 
-- https://www.python.org/doc/essays/blurb/
-- https://dev.to/duomly/10-reasons-why-learning-python-is-still-a-great-idea-5abh
-- https://www.stat.washington.edu/~hoytak/blog/whypython.html
-- https://www.programiz.com/python-programming

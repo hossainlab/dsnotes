@@ -1,25 +1,4 @@
 # Operators in Python
-[Datastics Lab](https://github.com/datasticslab/ISCB) | Created by [Jubayer Hossain](https://github.com/jubayer-hossain)
-## Previous 
-- Variables, Expressions, Statements, Comments 
-- Data types 
-- Anatomy of Strings 
-- Printing Message / String Formating
-    - Printing any variable without message
-    - Printing variable with message 
-    - f'String(Format Method)
-
-
-## Today
-- Boolean Data Types 
-- What are Operators?
-- Operators 
-    - Arithmetic operators
-    - Comparison operators
-    - Logical operators
-    - Assignment operators
-    - Identity operators
-    - Membership Operators 
 
 ## Boolean Data Types 
 - True: Returns True if the condition is True 
@@ -182,9 +161,3 @@ s3 = "Hello World!"
 
 # not in 
 "h" not in s3
-
-## Resources 
-- https://www.python.org/doc/essays/blurb/
-- https://dev.to/duomly/10-reasons-why-learning-python-is-still-a-great-idea-5abh
-- https://www.stat.washington.edu/~hoytak/blog/whypython.html
-- https://www.programiz.com/python-programming
