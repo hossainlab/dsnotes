@@ -1,4 +1,4 @@
-- file: pages/index
+- file: index
 
 - part: Introduction to Python
   chapters:
@@ -8,12 +8,15 @@
   - file: python/03-user_input&data_type_conversion
   - file: python/04-algo_thinking
   - file: python/05-conditional_logic
-
-
-
 - part: Numpy
   chapters:
-  - file: numpy/numpy
+  - file: numpy/00-introduction_to_numpy
+  - file: numpy/01-array _creation_function
+  - file: numpy/02-data_types
+  - file: numpy/03-array_operations
+  - file: numpy/04-vectors_and_matrices
+  - file: numpy/05-linear_algebra
+  - file: numpy/06-statistics
 
 - part: Pandas
   chapters:

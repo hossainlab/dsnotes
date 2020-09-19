@@ -1,4 +1,4 @@
-# Introduction to Algorithmic Thinking
+# Algorithmic Thinking
 
 
 ## What is Algorithms? 
