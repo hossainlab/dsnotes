@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Welcome &#8212; Data Science Notes</title>
+    <title>&lt;no title&gt; &#8212; Data Science Notes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
@@ -37,7 +37,6 @@
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction to Python" href="../python/00-python_intro.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -98,7 +97,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../python/04-algo_thinking.html">
-   Introduction to Algorithmic Thinking
+   Algorithmic Thinking
   </a>
  </li>
  <li class="toctree-l1">
@@ -114,8 +113,38 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../numpy/numpy.html">
-   Introduction to Numpy
+  <a class="reference internal" href="../numpy/00-introduction_to_numpy.html">
+   Introduction to NumPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy/01-array _creation_function.html">
+   Array Creation Function
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy/02-data_types.html">
+   In Progress!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy/02-data_types.html#references">
+   References
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy/03-array_operations.html">
+   Copying, Sorting and Reshaping
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy/05-linear_algebra.html">
+   Introduction to Linear Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy/06-statistics.html">
+   In Progress!
   </a>
  </li>
 </ul>
@@ -126,7 +155,7 @@
 </p>
 <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../pandas/pandas_intro.html">
+  <a class="reference internal" href="pandas_intro.html">
    Introduction to Pandas
   </a>
  </li>
@@ -184,9 +213,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/pages/index.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/pandas/19-Binning.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -204,9 +233,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         
-        <a class="edit-button" href="https://github.com/hossainlab/dsnotes/edit/master/book/pages/index.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+        
     </div>
 </div>
 
@@ -218,6 +245,28 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/hossainlab/dsnotes/master?urlpath=tree/book/pandas/19-Binning.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/hossainlab/dsnotes/blob/master/book/pandas/19-Binning.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
@@ -226,16 +275,7 @@
             <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#author">
-   Author
-  </a>
-  <ul class="nav section-nav flex-column">
-  </ul>
- </li>
-</ul>
-
+            
         </nav>
     </div>
 </div>
@@ -244,23 +284,10 @@
         
               <div>
                 
-  <div class="section" id="welcome">
-<h1>Welcome<a class="headerlink" href="#welcome" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to Data Science Notes. This is a short sequence of notes on Python programming for scientific work, specially in the field of data science written by <a class="reference external" href="https://jhossain.me/">Jubayer Hossian</a>.</p>
-<p>This site is available online at <a class="reference external" href="https://hossainlab.github.io/dsnotes/pages/index.html">github</a></p>
-<div class="section" id="author">
-<h2>Author<a class="headerlink" href="#author" title="Permalink to this headline">¶</a></h2>
-<p>Heye there! This is Jubayer Hossain. I am a student of Microbiology at <a class="reference external" href="https://jnu.ac.bd/dept/portal/web/microbiology">Jagannath University</a> and a Health Data Science Enthusiastic. I am also the founder of <a class="reference external" href="https://hdrobd.org/">Health Data Research Organization</a> My research interests are health data science, bioinformatics, microscopic image analysis, and machine learning. Recently, we have formed an organization named Health Data Research Organization for creating research opportunities in health data science and genomic data science in Bangladesh and I am working on it.</p>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-</div>
-</div>
+  <h3>About the Author</h3>
+This repo was created by <a href="https://www.linkedin.com/in/jubayer28/" target="_blank">Jubayer Hossain</a> <br>
+<a href="https://www.linkedin.com/in/jubayer28/" target="_blank">Jubayer Hossain</a> is a student of Microbiology at Jagannath University and the founder of <a href="https://github.com/hdro" target="_blank">Health Data Research Organization</a>. He is also a team member of a bioinformatics research group known as Bio-Bio-1. 
+<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.mm</p>
 
     <script type="text/x-thebe-config">
     {
@@ -275,7 +302,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./pages"
+            path: "./pandas"
         },
         predefinedOutput: true
     }
@@ -290,7 +317,6 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="../python/00-python_intro.html" title="next page">Introduction to Python</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

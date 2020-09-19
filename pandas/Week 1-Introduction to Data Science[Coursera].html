@@ -1,0 +1,1491 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>The Python Programming Language: Functions &#8212; Data Science Notes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Data Science Notes</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <p class="caption">
+ <span class="caption-text">
+  Introduction to Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/00-python_intro.html">
+   Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/01-string_formatting.html">
+   String Formatting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/02-operators_in_python.html">
+   Operators in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/03-user_input&amp;data_type_conversion.html">
+   User Input in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/04-algo_thinking.html">
+   Algorithmic Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/05-conditional_logic.html">
+   Conditional Logic
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numpy
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy/00-introduction_to_numpy.html">
+   Introduction to NumPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy/01-array _creation_function.html">
+   Array Creation Function
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy/02-data_types.html">
+   In Progress!
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy/02-data_types.html#references">
+   References
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy/03-array_operations.html">
+   Copying, Sorting and Reshaping
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy/05-linear_algebra.html">
+   Introduction to Linear Algebra
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../numpy/06-statistics.html">
+   In Progress!
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Pandas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="pandas_intro.html">
+   Introduction to Pandas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Matplotlib
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../matplotlib/matplotlib_intro.html">
+   Introduction to Matplotlib
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/pandas/Week 1-Introduction to Data Science[Coursera].ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/hossainlab/dsnotes/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/hossainlab/dsnotes/master?urlpath=tree/book/pandas/Week 1-Introduction to Data Science[Coursera].ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/hossainlab/dsnotes/blob/master/book/pandas/Week 1-Introduction to Data Science[Coursera].ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="the-python-programming-language-functions">
+<h1>The Python Programming Language: Functions<a class="headerlink" href="#the-python-programming-language-functions" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`add_numbers` is a function that takes two numbers and adds them together.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+
+<span class="n">add_numbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`add_numbers` updated to take an optional 3rd parameter. Using `print` allows printing of multiple expressions within a single cell.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">z</span><span class="o">==</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="n">z</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">add_numbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">add_numbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`add_numbers` updated to take an optional flag parameter.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">flag</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">flag</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Flag is true!&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">z</span><span class="o">==</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">add_numbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">flag</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Assign function `add_numbers` to variable `a`.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">add_numbers</span>
+<span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+# The Python Programming Language: Types and Sequences<br>
+Use `type` to return the object's type.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;This is a string&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">add_numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Tuples are an immutable data structure (cannot be altered).<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Lists are a mutable data structure.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use `append` to append an object to a list.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">3.3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This is an example of how to loop through each item in the list.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Or using the indexing operator:<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">while</span><span class="p">(</span> <span class="n">i</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use `+` to concatenate lists.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use `*` to repeat lists.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use the `in` operator to check if something is inside a list.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Now let's look at strings. Use bracket notation to slice a string.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;This is a string&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1">#first character</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">])</span> <span class="c1">#first character, but we have explicitly set the end character</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span> <span class="c1">#first two characters</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This will return the last element of the string.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This will return the slice starting from the 4th element from the end and stopping before the 2nd element from the end.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This is a slice from the beginning of the string and stopping before the 3rd element.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+And this is a slice starting from the 3rd element of the string and going all the way to the end.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">firstname</span> <span class="o">=</span> <span class="s1">&#39;Christopher&#39;</span>
+<span class="n">lastname</span> <span class="o">=</span> <span class="s1">&#39;Brooks&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">firstname</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">lastname</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">firstname</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Chris&#39;</span> <span class="ow">in</span> <span class="n">firstname</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`split` returns a list of all the words in a string, or a list split on a specific character.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">firstname</span> <span class="o">=</span> <span class="s1">&#39;Christopher Arthur Hansen Brooks&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># [0] selects the first element of the list</span>
+<span class="n">lastname</span> <span class="o">=</span> <span class="s1">&#39;Christopher Arthur Hansen Brooks&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># [-1] selects the last element of the list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">firstname</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lastname</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Make sure you convert objects to strings before concatenating.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Chris&#39;</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;Chris&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Dictionaries associate keys with values.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Christopher Brooks&#39;</span><span class="p">:</span> <span class="s1">&#39;brooksch@umich.edu&#39;</span><span class="p">,</span> <span class="s1">&#39;Bill Gates&#39;</span><span class="p">:</span> <span class="s1">&#39;billg@microsoft.com&#39;</span><span class="p">}</span>
+<span class="n">x</span><span class="p">[</span><span class="s1">&#39;Christopher Brooks&#39;</span><span class="p">]</span> <span class="c1"># Retrieve a value by using the indexing operator</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">[</span><span class="s1">&#39;Kevyn Collins-Thompson&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">x</span><span class="p">[</span><span class="s1">&#39;Kevyn Collins-Thompson&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Iterate over all of the keys:<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">name</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Iterate over all of the values:<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">email</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">email</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Iterate over all of the items in the list:<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">email</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">email</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+You can unpack a sequence into different variables:<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Christopher&#39;</span><span class="p">,</span> <span class="s1">&#39;Brooks&#39;</span><span class="p">,</span> <span class="s1">&#39;brooksch@umich.edu&#39;</span><span class="p">)</span>
+<span class="n">fname</span><span class="p">,</span> <span class="n">lname</span><span class="p">,</span> <span class="n">email</span> <span class="o">=</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fname</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lname</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Make sure the number of values you are unpacking matches the number of variables being assigned.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Christopher&#39;</span><span class="p">,</span> <span class="s1">&#39;Brooks&#39;</span><span class="p">,</span> <span class="s1">&#39;brooksch@umich.edu&#39;</span><span class="p">,</span> <span class="s1">&#39;Ann Arbor&#39;</span><span class="p">)</span>
+<span class="n">fname</span><span class="p">,</span> <span class="n">lname</span><span class="p">,</span> <span class="n">email</span> <span class="o">=</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+# The Python Programming Language: More on Strings<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Chris&#39;</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Chris&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Python has a built in method for convenient string formatting.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sales_record</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="mf">3.24</span><span class="p">,</span>
+<span class="s1">&#39;num_items&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+<span class="s1">&#39;person&#39;</span><span class="p">:</span> <span class="s1">&#39;Chris&#39;</span><span class="p">}</span>
+
+<span class="n">sales_statement</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> bought </span><span class="si">{}</span><span class="s1"> item(s) at a price of </span><span class="si">{}</span><span class="s1"> each for a total of </span><span class="si">{}</span><span class="s1">&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sales_statement</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sales_record</span><span class="p">[</span><span class="s1">&#39;person&#39;</span><span class="p">],</span>
+                             <span class="n">sales_record</span><span class="p">[</span><span class="s1">&#39;num_items&#39;</span><span class="p">],</span>
+                             <span class="n">sales_record</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">],</span>
+                             <span class="n">sales_record</span><span class="p">[</span><span class="s1">&#39;num_items&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">sales_record</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+# Reading and Writing CSV files<br>
+Let's import our datafile mpg.csv, which contains fuel economy data for 234 cars.
+<ul class="simple">
+<li><p>mpg : miles per gallon</p></li>
+<li><p>class : car classification</p></li>
+<li><p>cty : city mpg</p></li>
+<li><p>cyl : # of cylinders</p></li>
+<li><p>displ : engine displacement in liters</p></li>
+<li><p>drv : f = front-wheel drive, r = rear wheel drive, 4 = 4wd</p></li>
+<li><p>fl : fuel (e = ethanol E85, d = diesel, r = regular, p = premium, c = CNG)</p></li>
+<li><p>hwy : highway mpg</p></li>
+<li><p>manufacturer : automobile manufacturer</p></li>
+<li><p>model : model of car</p></li>
+<li><p>trans : type of transmission</p></li>
+<li><p>year : model year</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="o">%</span><span class="k">precision</span> 2
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;mpg.csv&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
+    <span class="n">mpg</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">))</span>
+    
+<span class="n">mpg</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># The first three dictionaries in our list.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`csv.Dictreader` has read in each row of our csv file as a dictionary. `len` shows that our list is comprised of 234 dictionaries.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">mpg</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`keys` gives us the column names of our csv.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This is how to find the average cty fuel economy across all cars. All values in the dictionaries are strings, so we need to convert to float.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;cty&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">mpg</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">mpg</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Similarly this is how to find the average hwy fuel economy across all cars.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;hwy&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">mpg</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">mpg</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use `set` to return the unique values for the number of cylinders the cars in our dataset have.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cylinders</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;cyl&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">mpg</span><span class="p">)</span>
+<span class="n">cylinders</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Here's a more complex example where we are grouping the cars by number of cylinder, and finding the average cty mpg for each group.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CtyMpgByCyl</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cylinders</span><span class="p">:</span> <span class="c1"># iterate over all the cylinder levels</span>
+    <span class="n">summpg</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">cyltypecount</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">mpg</span><span class="p">:</span> <span class="c1"># iterate over all dictionaries</span>
+        <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;cyl&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="p">:</span> <span class="c1"># if the cylinder level type matches,</span>
+            <span class="n">summpg</span> <span class="o">+=</span> <span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;cty&#39;</span><span class="p">])</span> <span class="c1"># add the cty mpg</span>
+            <span class="n">cyltypecount</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># increment the count</span>
+    <span class="n">CtyMpgByCyl</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">c</span><span class="p">,</span> <span class="n">summpg</span> <span class="o">/</span> <span class="n">cyltypecount</span><span class="p">))</span> <span class="c1"># append the tuple (&#39;cylinder&#39;, &#39;avg mpg&#39;)</span>
+
+<span class="n">CtyMpgByCyl</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">CtyMpgByCyl</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use `set` to return the unique values for the class types in our dataset.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vehicleclass</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">mpg</span><span class="p">)</span> <span class="c1"># what are the class types</span>
+<span class="n">vehicleclass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+And here's an example of how to find the average hwy mpg for each class of vehicle in our dataset.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">HwyMpgByClass</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">vehicleclass</span><span class="p">:</span> <span class="c1"># iterate over all the vehicle classes</span>
+    <span class="n">summpg</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">vclasscount</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">mpg</span><span class="p">:</span> <span class="c1"># iterate over all dictionaries</span>
+        <span class="k">if</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">t</span><span class="p">:</span> <span class="c1"># if the cylinder amount type matches,</span>
+            <span class="n">summpg</span> <span class="o">+=</span> <span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="s1">&#39;hwy&#39;</span><span class="p">])</span> <span class="c1"># add the hwy mpg</span>
+            <span class="n">vclasscount</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># increment the count</span>
+    <span class="n">HwyMpgByClass</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">t</span><span class="p">,</span> <span class="n">summpg</span> <span class="o">/</span> <span class="n">vclasscount</span><span class="p">))</span> <span class="c1"># append the tuple (&#39;class&#39;, &#39;avg mpg&#39;)</span>
+
+<span class="n">HwyMpgByClass</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">HwyMpgByClass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+# The Python Programming Language: Dates and Times<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">import</span> <span class="nn">time</span> <span class="k">as</span> <span class="nn">tm</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`time` returns the current time in seconds since the Epoch. (January 1st, 1970)<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tm</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Convert the timestamp to datetime.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dtnow</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">tm</span><span class="o">.</span><span class="n">time</span><span class="p">())</span>
+<span class="n">dtnow</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Handy datetime attributes:<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dtnow</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">dtnow</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">dtnow</span><span class="o">.</span><span class="n">day</span><span class="p">,</span> <span class="n">dtnow</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">dtnow</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="n">dtnow</span><span class="o">.</span><span class="n">second</span> <span class="c1"># get year, month, day, etc.from a datetime</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`timedelta` is a duration expressing the difference between two dates.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">delta</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span> <span class="c1"># create a timedelta of 100 days</span>
+<span class="n">delta</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`date.today` returns the current local date.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">today</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">today</span> <span class="o">-</span> <span class="n">delta</span> <span class="c1"># the date 100 days ago</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">today</span> <span class="o">&gt;</span> <span class="n">today</span><span class="o">-</span><span class="n">delta</span> <span class="c1"># compare dates</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+# The Python Programming Language: Objects and map()<br>
+An example of a class in python:<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="n">department</span> <span class="o">=</span> <span class="s1">&#39;School of Information&#39;</span> <span class="c1">#a class variable</span>
+
+    <span class="k">def</span> <span class="nf">set_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_name</span><span class="p">):</span> <span class="c1">#a method</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">new_name</span>
+    <span class="k">def</span> <span class="nf">set_location</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_location</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="n">new_location</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="n">person</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="s1">&#39;Christopher Brooks&#39;</span><span class="p">)</span>
+<span class="n">person</span><span class="o">.</span><span class="n">set_location</span><span class="p">(</span><span class="s1">&#39;Ann Arbor, MI, USA&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> live in </span><span class="si">{}</span><span class="s1"> and works in the department </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">person</span><span class="o">.</span><span class="n">location</span><span class="p">,</span> <span class="n">person</span><span class="o">.</span><span class="n">department</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Here's an example of mapping the `min` function between two lists.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">store1</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10.00</span><span class="p">,</span> <span class="mf">11.00</span><span class="p">,</span> <span class="mf">12.34</span><span class="p">,</span> <span class="mf">2.34</span><span class="p">]</span>
+<span class="n">store2</span> <span class="o">=</span> <span class="p">[</span><span class="mf">9.00</span><span class="p">,</span> <span class="mf">11.10</span><span class="p">,</span> <span class="mf">12.34</span><span class="p">,</span> <span class="mf">2.01</span><span class="p">]</span>
+<span class="n">cheapest</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">min</span><span class="p">,</span> <span class="n">store1</span><span class="p">,</span> <span class="n">store2</span><span class="p">)</span>
+<span class="n">cheapest</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Now let's iterate through the map object to see the values.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">cheapest</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+# The Python Programming Language: Lambda and List Comprehensions<br>
+Here's an example of lambda that takes in three parameters and adds the first two.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_function</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_function</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Let's iterate from 0 to 999 and return the even numbers.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+<span class="n">my_list</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Now the same thing but with list comprehension.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">number</span> <span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span> <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">my_list</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+# The Python Programming Language: Numerical Python (NumPy)<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+## Creating Arrays<p>Create a list and convert it to a numpy array</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Or just pass in a list directly<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Pass in a list of lists to create a multidimensional array.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]])</span>
+<span class="n">m</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use the shape method to find the dimensions of the array. (rows, columns)<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`arange` returns evenly spaced values within a given interval.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># start at 0 count up by 2, stop before 30</span>
+<span class="n">n</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`reshape` returns an array with the same data with a new shape.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1"># reshape array to be 3x5</span>
+<span class="n">n</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`linspace` returns evenly spaced numbers over a specified interval.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">o</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span> <span class="c1"># return 9 evenly spaced values from 0 to 4</span>
+<span class="n">o</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`resize` changes the shape and size of array in-place.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">o</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">o</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`ones` returns a new array of given shape and type, filled with ones.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`zeros` returns a new array of given shape and type, filled with zeros.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`eye` returns a 2-D array with ones on the diagonal and zeros elsewhere.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`diag` extracts a diagonal or constructs a diagonal array.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Create an array using repeating list (or see `np.tile`)<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Repeat elements of an array using `repeat`.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">repeat</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+#### Combining Arrays<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="nb">int</span><span class="p">)</span>
+<span class="n">p</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use `vstack` to stack arrays in sequence vertically (row wise).<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">p</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">p</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use `hstack` to stack arrays in sequence horizontally (column wise).<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">p</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">p</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+## Operations<p>Use <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code> and <code class="docutils literal notranslate"><span class="pre">**</span></code> to perform element wise addition, subtraction, multiplication, division and power.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># elementwise addition     [1 2 3] + [4 5 6] = [5  7  9]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># elementwise subtraction  [1 2 3] - [4 5 6] = [-3 -3 -3]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># elementwise multiplication  [1 2 3] * [4 5 6] = [4  10  18]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># elementwise divison         [1 2 3] / [4 5 6] = [0.25  0.4  0.5]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># elementwise power  [1 2 3] ^2 =  [1 4 9]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+**Dot Product:**  
+<p><span class="math notranslate nohighlight">\( \begin{bmatrix}x_1 \ x_2 \ x_3\end{bmatrix}
+\cdot
+\begin{bmatrix}y_1 \\ y_2 \\ y_3\end{bmatrix}
+= x_1 y_1 + x_2 y_2 + x_3 y_3\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="c1"># dot product  1*4 + 2*5 + 3*6</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">y</span><span class="p">,</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">z</span><span class="p">))</span> <span class="c1"># number of rows of array</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Let's look at transposing arrays. Transposing permutes the dimensions of the array.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">y</span><span class="p">,</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">])</span>
+<span class="n">z</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The shape of array `z` is `(2,3)` before transposing.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use `.T` to get the transpose.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+The number of rows has swapped with the number of columns.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use `.dtype` to see the data type of the elements in the array.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use `.astype` to cast to a specific type.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">z</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+<span class="n">z</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+## Math Functions<p>Numpy has many built in math functions that can be performed on arrays.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`argmax` and `argmin` return the index of the maximum and minimum values in the array.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">argmax</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+## Indexing / Slicing<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">s</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use bracket notation to get the value at a specific index. Remember that indexing starts at 0.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use `:` to indicate a range. `array[start:stop]`
+<p>Leaving <code class="docutils literal notranslate"><span class="pre">start</span></code> or <code class="docutils literal notranslate"><span class="pre">stop</span></code> empty will default to the beginning/end of the array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use negatives to count from the back.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+A second `:` can be used to indicate step-size. `array[start:stop:stepsize]`
+<p>Here we are starting 5th element from the end, and counting backwards by 2 until the beginning of the array is reached.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">::</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Let's look at a multidimensional array.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">36</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">r</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use bracket notation to slice: `array[row, column]`<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+And use : to select a range of rows or columns<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Here we are selecting all the rows up to (and not including) row 2, and all the columns up to (and not including) the last column.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+This is a slice of the last row, and only every other element.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+We can also perform conditional indexing. Here we are selecting values from the array that are greater than 30. (Also see `np.where`)<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="p">[</span><span class="n">r</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Here we are assigning all values in the array that are greater than 30 to the value of 30.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="p">[</span><span class="n">r</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">]</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">r</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+## Copying Data<p>Be careful with copying and modifying arrays in NumPy!</p>
+<p><code class="docutils literal notranslate"><span class="pre">r2</span></code> is a slice of <code class="docutils literal notranslate"><span class="pre">r</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r2</span> <span class="o">=</span> <span class="n">r</span><span class="p">[:</span><span class="mi">3</span><span class="p">,:</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">r2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Set this slice's values to zero ([:] selects the entire array)<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r2</span><span class="p">[:]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">r2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+`r` has also been changed!<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+To avoid this, use `r.copy` to create a copy that will not affect the original array<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r_copy</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">r_copy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Now when r_copy is modified, r will not be changed.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r_copy</span><span class="p">[:]</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r_copy</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+### Iterating Over Arrays<p>Let’s create a new 4 by 3 array of random numbers 0-9.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">test</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Iterate by row:<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">test</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Iterate by index:<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">test</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Iterate by row and index:<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">test</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;row&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<br>
+Use `zip` to iterate over multiple iterables.<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test2</span> <span class="o">=</span> <span class="n">test</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">test2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">test</span><span class="p">,</span> <span class="n">test2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="s1">&#39;=&#39;</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="n">j</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./pandas"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Jubayer Hossain<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    
+  </body>
+</html>
